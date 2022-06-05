@@ -1,6 +1,6 @@
 # README_extra
 ## Odpowiedź
-Oczywiscie, ze mozna utworzyc taki commit, zawarlem go w repozytrium jako ostatni commit(nie liczac commita dodajacego README.md oraz README-extra.md).
+Oczywiscie, ze mozna utworzyc taki commit, zawarlem go w repozytrium jako ostatni commit(nie liczac commitow dodajacych/modyfikujacych pliki README.md oraz README-extra.md).
 Aby go utworzyc nalezy:
 1. Stworzyc odpowiednie foldery (bin, include, lib, src)
 2. Przeniesc do nich odpowiadajace pliki (Code2, KalkulatorObjetosci.h, KalkulatorPola.h libKalkulatorObjetosci.so, libKalkulatorPola.a, Code2.c, KalkulatorObjetosci.c, KalkulatorPola.c)
