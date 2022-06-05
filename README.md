@@ -8,13 +8,15 @@ Alternatywnie pobierz repozytorium w formacie .zip (Zielony przycisk w prawym go
  - Recznie usuwajac pliki z rozszerzeniami *.o *.so *.a oraz skompilowany plik Code2
 3. W celu kompilacji uruchom plik makefile poleceniem `make`
 4. Skompilowany program pojawi sie w katalogu `./bin`, natomiast odpowiednie pliki zostana przeniesione do swoich katalogow
+5. Nalezy uruchomic program poleceniem `./bin/Code2`
 ### Aby sprawdzic poprzednie wersje programu nalezy wykonac nastepujace kroki
 1. Uzywajac polecenia `git log` nalezy wyswietlic wszystkie commity w repozytorium
-2. Aby przejsc do wybranego commita nalezy zlokalizowac i skopiowac jego Hash (jest to wartosc zlozona z cyfr i liczb pokolorowana na zolto wystepujaca po slowie commit, ponad autorem)
+2. Aby przejsc do wybranego commita nalezy zlokalizowac i skopiowac jego Hash (jest to wartosc zlozona z cyfr i liczb pokolorowana na żółto wystepujaca po slowie commit, ponad autorem)
 3. Nalezy wpisac polecenie `git checkout (skopiowany Hash)` - spowoduje to przeksztalcenie katalogu pracy do stanu zapisanego w commicie
-4. Ostatnim krokiem jest uruchomienie kompilacji poleceniem `make` i sprawdzenie dzialania programu
-Aby powrocic do aktualnego stanu repozytorium wpisz polecenie `git switch -` lub `git checkout -` lub `git checkout main`
-(Nalezy pamietac, ze skompilowane w przeszlych commitach pliki, nie sa sledzone przez gita zatem najlepiej jest je usunac recznie po zakonczeniu testowania, aby zachowac czystosc w repozytorium)
+4. Nastepnie, aby po skompilowaniu biblioteka wspoldzielona byla widoczna nalezy ustawic zmienna LD_LIBRARY_PATH, poprzez wpisanie w bash polecenia `export LD_LIBRARY_PATH=$(pwd)`, jezeli znajdujemy sie w folderze zawiarajacym pliki z repozytorium. W innym wypadku nalezy zamienic `$(pwd)` w komendzie na sciezke prowadzaca do folderu z repozytorium
+5. Ostatnim krokiem jest uruchomienie kompilacji poleceniem `make` i sprawdzenie dzialania programu poprzez jego uruchomienie komenda `./Code2`  
+> Aby powrocic do aktualnego stanu repozytorium wpisz polecenie `git switch -` lub `git checkout -` lub `git checkout main`
+(Nalezy pamietac, ze skompilowane w przeszlych commitach pliki, nie sa sledzone przez git'a zatem najlepiej jest je usunac recznie po zakonczeniu testowania, aby zachowac czystosc w folderze z repozytorium)
 # Rozklad plikow w katalogach prezentuje sie nastepujaco
 `├── bin`  
 `│ └── Code2`  
