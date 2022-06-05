@@ -10,7 +10,6 @@ int main() {
 		if (scanf("%d", &tryb) != 1){
 			while ((c = getchar()) != '\n' && c != EOF); //clear buffer
 		}
-		while ((c = getchar()) != '\n' && c != EOF);
     } while (tryb != 1 && tryb != 2);
 	while ((c = getchar()) != '\n' && c != EOF); //clear buffer again
     if (tryb == 1) {
