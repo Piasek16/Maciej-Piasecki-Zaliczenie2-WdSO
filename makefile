@@ -1,11 +1,11 @@
 Code2: Code2.c libKalkulatorObjetosci.so libKalkulatorPola.a
 	gcc -o $@ $^
 
-.c.o:
+%.o: %.c
 	gcc -c -fPIC $<
 
-libKalkulatorPola.a: KalkulatorPola.o
+lib%.a: %.o
 	ar rs $@ $<
 	
-libKalkulatorObjetosci.so: KalkulatorObjetosci.o
+lib%.so: %.o
 	gcc -shared -o $@ $<
