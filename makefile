@@ -1,10 +1,10 @@
 Code2: Code2.c libKalkulatorObjetosci.so libKalkulatorPola.a
-	gcc -o Code2 Code2.c libKalkulatorObjetosci.so libKalkulatorPola.a
+	gcc -o $@ $^
 
 libKalkulatorPola.a: KalkulatorPola.c
-	gcc -c -fPIC KalkulatorPola.c
-	ar rs libKalkulatorPola.a KalkulatorPola.o
+	gcc -c -fPIC $<
+	ar rs $@ KalkulatorPola.o
 	
 libKalkulatorObjetosci.so: KalkulatorObjetosci.c
-	gcc -c -fPIC KalkulatorObjetosci.c
-	gcc -shared -o libKalkulatorObjetosci.so KalkulatorObjetosci.o
+	gcc -c -fPIC $<
+	gcc -shared -o $@ KalkulatorObjetosci.o
