@@ -1,0 +1,1 @@
+float obliczPole(float bok1, float bok2);
